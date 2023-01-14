@@ -1,0 +1,21 @@
+.about-me__container {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vh;
+}
+
+.about-me__container * {
+    padding: 3vh;
+}
+
+.about-me__container a {
+    padding: 0;
+}
+
+.about-me__container p {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,61 @@
+.main_content {
+    /* Variables */
+    --element-border: 2px solid var(--primary-color);
+    --element-line-height: 20px;
+
+
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(3, 30%);
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: 
+        "about_me about_me about_me one one two two "
+        "three three logo logo logo four four"
+        "five five six six nav nav nav"
+    ;
+    gap: 3%;
+    align-content: center;
+    font-size: 12px;
+    padding: 3vh;
+}
+
+.details-about-me__container {
+    grid-area: about_me;
+    /* background-color: antiquewhite; */
+    line-height: var(--element-line-height);
+    border: var(--element-border);
+    padding: 10px;
+}
+
+.details-about-me__container p,
+.details-projects__container p {
+    padding: 5px 0;
+}
+
+.logo__container {
+    grid-area: logo;
+    background-color: aqua;
+    padding: 5px;
+}
+
+.details-projects__container {
+    grid-area: nav;
+    padding: 10px;
+    border: var(--element-border);
+    line-height: var(--element-line-height);
+    position: relative;
+}
+
+.prueba {
+    background-color: blue;
+    grid-area: one;
+}
+
+.details-projects__container nav {
+    background-color: navajowhite;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+}
