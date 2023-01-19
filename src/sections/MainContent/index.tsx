@@ -1,9 +1,13 @@
-import "./MainContent.css"
+import "./MainContent.css";
+import githubImg from "../../assets/images/github.svg"
+import platziImg from "../../assets/images/platzi.svg"
+import linkedinImg from "../../assets/images/linkedin.svg"
+import logo from "../../assets/images/logo.svg"
 
 function MainContent() {
     return (
         <div className="main_content">
-            <div className="details-about-me__container">
+            <div className="main_content__element details-about-me__container">
                 <p>
                     Disfruto mucho de programar y siempre trato de respetar las
                     buenas prácticas.
@@ -15,18 +19,33 @@ function MainContent() {
                     etc.
                 </p>
             </div>
-            <div className="logo__container"></div>
-            <div className="details-projects__container">
+            <div className="main_content__element logo__container">
+                <img src={logo} alt="logo Santiago Reynoso" />
+            </div>
+            <div className="main_content__element details-projects__container">
                 <p>
                     Estos son algunos proyectos que me han ayudado a practicar
                     lo que aprendo.
                 </p>
                 <p>A medida que crezcan, irán apareciendo por acá.</p>
-                <nav>asd</nav>
+                <nav>
+                    <a href="#">
+                        <img src={githubImg} alt="" />
+                    </a>
+                    <a href="#">
+                        <img src={linkedinImg} alt="" />
+                    </a>
+                    <a href="#">
+                        <img src={platziImg} alt="" />
+                    </a>
+                </nav>
             </div>
-            <div className="prueba">asd</div>
-            <div>asd</div>
-            <div>asd</div>
+            <div className="main_content__element one">asd</div>
+            <div className="main_content__element two">asd</div>
+            <div className="main_content__element three">asd</div>
+            <div className="main_content__element four">asd</div>
+            <div className="main_content__element five">asd</div>
+            <div className="main_content__element six">asd</div>
         </div>
     );
 }

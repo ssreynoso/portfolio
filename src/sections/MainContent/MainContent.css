@@ -3,28 +3,47 @@
     --element-border: 2px solid var(--primary-color);
     --element-line-height: 20px;
 
-
     display: grid;
     height: 100%;
     grid-template-rows: repeat(3, 30%);
     grid-template-columns: repeat(7, 1fr);
     grid-template-areas: 
-        "about_me about_me about_me one one two two "
+        "about_me about_me about_me one one two two " 
         "three three logo logo logo four four"
         "five five six six nav nav nav"
     ;
     gap: 3%;
     align-content: center;
-    font-size: 12px;
     padding: 3vh;
+}
+
+.main_content__element {
+    line-height: var(--element-line-height);
+    border: var(--element-border);
+    padding: 5px 10px;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 .details-about-me__container {
     grid-area: about_me;
-    /* background-color: antiquewhite; */
-    line-height: var(--element-line-height);
-    border: var(--element-border);
-    padding: 10px;
+}
+
+.logo__container {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__container img {
+    height: 50px;
+    user-select: none;
+}
+
+.details-projects__container {
+    grid-area: nav;
+    position: relative;
 }
 
 .details-about-me__container p,
@@ -32,30 +51,54 @@
     padding: 5px 0;
 }
 
-.logo__container {
-    grid-area: logo;
-    background-color: aqua;
-    padding: 5px;
+.details-projects__container nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    right: 0;
+    bottom: 0;
+    padding: 10px;    
 }
 
-.details-projects__container {
-    grid-area: nav;
-    padding: 10px;
-    border: var(--element-border);
-    line-height: var(--element-line-height);
-    position: relative;
+.details-projects__container a {
+    display: inline-block;
+    height: 25px;
+    margin-left: 18px;
+    transition: all .2s ease;
+    filter: drop-shadow(0 0 0 black);
 }
 
-.prueba {
-    background-color: blue;
+.details-projects__container a:hover {
+    filter: drop-shadow(0 -5px 4px var(--secondary-color));
+}
+
+.details-projects__container a img {
+    height: 100%;
+}
+
+
+.one {
     grid-area: one;
 }
 
-.details-projects__container nav {
-    background-color: navajowhite;
-    position: absolute;
-    width: 100%;
-    right: 0;
-    bottom: 0;
-    height: 40px;
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
 }

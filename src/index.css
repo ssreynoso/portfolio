@@ -3,11 +3,19 @@
     src: url();
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* @font-face {
+    font-family: Lato;
+    src: url("./assets/fonts/Lato/Lato-Regular.ttf");
+} */
+
 
 :root {
     /* Fonts */
@@ -15,8 +23,13 @@
     --secondary-font: "Dancing Script";
 
     /* Colors */
+    --white: #FDFFFF;
+    --black: #000;
     --primary-color: #1A1A1A;
-    --background-color: #000; 
+    --secondary-color: #B10F2E;
+    --tertiary-color: #9F9FED;
+    --alternative-color: #39276A;
+    --background-color: var(--black); 
 
     --primary-font-color: #000;
 

@@ -32,4 +32,11 @@
 .technologies__item {
     border: 2px solid #fff;
     border-style: dashed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.technologies__item img {
+    width: 70%;
 }
